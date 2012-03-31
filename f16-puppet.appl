@@ -1,0 +1,14 @@
+name: f16-puppet
+summary: fedora 16 and puppet
+os:
+  name: fedora
+  version: 16
+hardware:
+  partitions:
+    "/":
+      size: 2
+packages:
+  - @core
+  - puppet
+
+

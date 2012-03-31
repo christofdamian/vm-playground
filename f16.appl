@@ -1,0 +1,12 @@
+name: f16-basic
+summary: Just Enough Operating System based on Fedora 16
+os:
+  name: fedora
+  version: 16
+hardware:
+  partitions:
+    "/":
+      size: 2
+packages:
+  - @core
+
