@@ -1,0 +1,6 @@
+#!/bin/bash
+
+git_build_number=`./bin/git-build-number`
+
+rpmbuild -ba --define '_topdir rpm' --define "git_build_number $git_build_number" rpm/SPECS/webapp.spec
+
