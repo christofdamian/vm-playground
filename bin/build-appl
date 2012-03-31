@@ -1,0 +1,5 @@
+#!/bin/bash 
+
+createrepo rpm/RPMS/noarch
+
+boxgrinder-build -f f16-webapp.appl

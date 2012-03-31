@@ -9,6 +9,9 @@ URL:		http://example.com/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 Source0:		%{name}-%{gitbuild}.tgz
 
+Requires:	httpd
+Requires:	php
+
 BuildArch:	noarch
 
 %description

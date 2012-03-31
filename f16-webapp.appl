@@ -1,0 +1,25 @@
+name: f16-basic
+summary: Just Enough Operating System based on Fedora 16
+os:
+  name: fedora
+  version: 16
+hardware:
+  partitions:
+    "/":
+      size: 2
+
+default_repos: true
+repos:
+  - name: "local-noarch"
+    baseurl: "file:///home/cdamian/playground/rpm/RPMS/noarch"
+    ephemeral: true
+#  - name: "local-#ARCH#"
+#    baseurl: "file:///opt/repo/RPMS/#ARCH#"
+#    ephemeral: true
+
+
+packages:
+  includes:
+    - @core
+    - webapp
+
