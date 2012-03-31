@@ -1,6 +1,13 @@
 #!/bin/bash
 
-git_build_number=`./bin/git-build-number`
+gitbuild=`./bin/git-build-number`
+topdir=`pwd`/rpm
 
-rpmbuild -ba --define '_topdir rpm' --define "git_build_number $git_build_number" rpm/SPECS/webapp.spec
+(
+  cd src;
+  tar cvfz ../rpm/SOURCES/webapp-$gitbuild.tgz .
+)
+
+rpmbuild -ba --define "_topdir $topdir" --define "gitbuild $gitbuild" rpm/SPECS/webapp.spec
+
 

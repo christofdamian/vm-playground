@@ -2,3 +2,5 @@ build
 log
 *~
 rpm/*RPMS
+rpm/BUILD*
+rpm/SOURCES
