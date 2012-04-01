@@ -1,5 +1,5 @@
-name: f16-basic
-summary: Just Enough Operating System based on Fedora 16
+name: webapp
+summary: Webapp Image
 os:
   name: fedora
   version: 16
