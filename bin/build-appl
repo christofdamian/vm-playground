@@ -2,4 +2,4 @@
 
 createrepo rpm/RPMS/noarch
 
-boxgrinder-build -f webapp.appl
+boxgrinder-build -f config/webapp.appl
