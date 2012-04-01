@@ -8,6 +8,8 @@ topdir=`pwd`/rpm
   tar cvfz ../rpm/SOURCES/webapp-$gitbuild.tgz .
 )
 
+cp -a config/*-httpd.conf rpm/SOURCES
+
 rpmbuild -ba --define "_topdir $topdir" --define "gitbuild $gitbuild" rpm/SPECS/webapp.spec
 
 
