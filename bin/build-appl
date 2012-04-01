@@ -2,4 +2,4 @@
 
 createrepo rpm/RPMS/noarch
 
-boxgrinder-build -f config/webapp.appl
+boxgrinder-build config/webapp.appl --force --os-config format:qcow2 

@@ -1,0 +1,12 @@
+#!/bin/bash
+
+for i in `seq 4`; do
+	name="webapp-$i"
+	sudo virsh destroy $name
+	sudo virsh undefine $name
+done
+
+sudo virsh net-destroy playground
+sudo virsh net-undefine playground
+
+

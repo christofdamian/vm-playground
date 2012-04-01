@@ -4,3 +4,4 @@ log
 rpm/*RPMS
 rpm/BUILD*
 rpm/SOURCES
+images

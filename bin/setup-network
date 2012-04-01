@@ -1,0 +1,22 @@
+#!/bin/bash
+
+topdir=`pwd`
+
+sudo virsh net-create config/playground-network.xml
+
+mkdir -p images
+
+for i in `seq 4`; do 
+	name="webapp-$i"
+	sudo qemu-img create -b $topdir/build/appliances/x86_64/fedora/16/webapp/1.0/fedora-plugin/webapp-sda.qcow2 \
+		-f qcow2 $topdir/images/$name.qcow2
+	sudo virt-install \
+		--import \
+		--name $name \
+		--ram 512 \
+		--disk images/$name.qcow2,format=qcow2 \
+		--network network:playground \
+		--vnc \
+		--noautoconsole 
+
+done
